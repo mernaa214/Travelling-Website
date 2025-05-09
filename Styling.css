@@ -1,0 +1,286 @@
+/*                                     HOME PAGE                                      */
+body {
+    margin: 0;
+    background-color: beige;
+}
+
+/*                                      HEADER                                                 */
+                            /*navbar style in navbarStyle.css*/
+
+.banner > p {
+    display: flex;
+    width: 18%; /*the more the width is smaller,the more the content is right*/
+    margin: 140px auto 0 auto;
+    color: antiquewhite;
+    text-shadow: 3px 0 10px chocolate;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.content { /*Unforgettable travel experiences with a positive impact*/
+    width: 30%;
+    margin: 3px auto 0 auto;
+    word-spacing: 2px;
+    color: khaki;
+    text-shadow: 3px 0 10px chocolate;
+    font-weight: bold;
+    font-size: 40px;
+}
+/*--------------------------------------------------------------------------------------------*/
+
+/*                                         UPPER SECTION                                         */
+#AboutUs {
+    width: 100%;
+    height: 490px;
+}
+
+    #AboutUs h2, footer > h2 { /*About us*/
+        font-family: "Kanit", sans-serif;
+        font-weight: 400;
+        color: darkkhaki;
+        text-shadow: 1px 0 2px darkkhaki;
+        margin-left: 40px;
+        display: inline;
+    }
+
+
+    #AboutUs h1 { /*Discover Every Inch Of The Earth With Us*/
+        color: #373333;
+        text-shadow: 1px 0 2px darkkhaki;
+        font-size: xx-large;
+        margin: 0 0 0 40px;
+    }
+
+    #AboutUs p {
+        color: #373333;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-shadow: 0px 0 1px darkkhaki;
+        margin: 0 0 0 40px;
+        font-weight: bold;
+        font-size: 15px;
+        width: fit-content;
+    }
+
+
+.img1_AboutUs {
+    width: 190px;
+    height: 250px;
+    background-image: url(mainpage/houses.jpg);
+    background-size: cover;
+    transform: translate(800px,-300px);
+    border-radius: 1cm;
+}
+
+.img2_AboutUs {
+    width: 190px;
+    height: 260px;
+    background-image: url(mainpage/airport.jpg);
+    background-size: cover;
+    transform: translate(900px,-390px);
+    border-radius: 1cm;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*                                         LOWER SECTION                                         */
+#destination {
+    width: 100%;
+    height: 600px;
+}
+
+
+    #destination h2 {
+        text-align: center;
+        color: darkkhaki;
+        text-shadow: 3px 1px 3px darkkhaki;
+        font-size: 45px;
+        white-space: pre;
+        margin-bottom: 25px;
+    }
+
+    #destination > p {
+        margin-top: 0px;
+        text-align: center;
+        font-family: "Jersey 25", sans-serif;
+        font-weight: 450;
+        font-size: 30px;
+        color: #373333;
+        text-shadow: 2px 3px 6px darkkhaki;
+    }
+
+.countries {
+    height: 512px;
+}
+
+    .countries h1 {
+        transform: translate(7px,170px);
+        margin-bottom: 30px;
+        font-family: "Jersey 25", sans-serif;
+        letter-spacing: 1px;
+        font-weight: 465;
+        color: cornsilk;
+        text-shadow: 3px 1px gray;
+    }
+
+    .countries p {        
+        white-space: pre;
+        font-weight: bold;
+        font-size: large;
+        color: cornsilk;
+        /*text-shadow: 3px 1px gray;*/
+        margin-bottom: 0px;
+        margin-top: 6px;
+    }
+
+#destination div p {
+    transform: translate(10px,150px);
+}
+
+.countries a {
+    display: block; /*to suit div size */
+    width: 230px;
+    height: 290px;
+}
+
+.countries div {
+    width: 230px;
+    height: 290px;
+    border-radius: 1cm;
+    background-size: cover;
+    box-shadow: -1px -1px 5px gray;
+    color: white;
+}
+
+
+
+.turkey {
+    background-image: url(TURKEY/turkey_main.jpg);
+}
+
+.france {
+    background-image: url(FRANCE/francemain.jpg);
+}
+
+.bali {
+    background-image: url(BALI/bali_main.jpg);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.morocco {
+    background-image: url(MOROCCO/moroccomain.jpg);
+}
+
+.thailand {
+    background-image: url(THAILAND/thailandmain.jpg);
+}
+/*--------------------------------------------------------------------------------------------*/
+
+/*                                         FOOTER                                         */
+footer {
+    height:620px;
+    color: #373333;
+    text-shadow: 1px 0 2px darkkhaki;
+    font-weight: bolder;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer p {
+        display: inline;
+        margin-left: 43px;
+        white-space: pre;
+}
+table {
+    width: 85%;
+    margin-left:auto;
+    margin-right:auto;
+}
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd; /*given to <td> not <tr> */
+    border-left: 1px solid #ddd;
+    font-size:12px;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+/* ---------------------------------------------------Sign in /register Form--------------------------------------------- */
+.Form-header {
+    background-image: url(mainpage/vanosdall.jpg); /* Specify your background image URL here */
+    background-size: cover;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.form-buttons {
+    display: flex;
+}
+
+.register-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center; /*to control the header place*/
+}
+
+    .register-form input {
+        display: block;
+        margin-bottom: 5px;
+        width: 85%;
+        padding: 8px;
+        margin-left: 5%;
+        border: none; /* Remove all borders */
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 3%;
+    }
+
+
+/*style for the buttons I used "Mariam" */
+.buttonStyle1 {
+    background-color: #ad7f57;
+    color: rgb(245, 243, 237);
+    font-size: 16px;
+    font-style: normal;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+    .buttonStyle1:hover {
+        background-color: #8c0653;
+        color: #fff;
+    }
