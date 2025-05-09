@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Travelling Website" />
+    <meta name="keywords" content="turkey,bali,travel,thailand,morroco,france" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Booking</title>
+  <meta charset="utf-8" />
+
+  <link href="countriesStyling.css" rel="stylesheet" />
+  <!--           Google Font                 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <!------------------------------------------------->
+  <!--           icons               -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="navbarStyle.css">
+
+  <!-- Link to the Sign In / Register Form in javascript -->
+  <script src="signInRegister.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      /*عشان ال default مش الطف حاجه*/
+      background-image: url("mainpage/vanosdall.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #373333;
+      height:1200px;
+    }
+
+    .booking-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(242,
+          238,
+          232,
+          0.436);
+      /* Transparent background for container */
+      border-radius: 10px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      /* background-color: rgba(242, 238, 232, 0.436); */
+      background-color: #bc086b;
+      border: 1px solid rgb(242, 238, 232);
+      color: rgb(245, 243, 237);
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8c0653;
+      color: rgb(245, 243, 237);
+      border-color: transparent;
+    }
+
+    .booking-form {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Slightly more opaque background for form */
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .booking-form input[type="text"],
+    .booking-form input[type="email"],
+    .booking-form input[type="date"],
+    .booking-form input[type="number"],
+    .booking-form select {
+      width: 99%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.741);
+      color: #373333;
+      margin-bottom: 15px;
+    }
+
+      .booking-form input[type="date"],
+      .booking-form input[type="number"] {
+          /*ال width بتاعهم اكبر من الباقي*/
+          width: 95%;
+          /* Media query for responsive design */
+          @media screen and (max-width: 768px) {
+              .booking-container {
+                  margin: 20px;
+                  padding: 15px;
+              }
+
+              .booking-form {
+                  padding: 15px; /*قللت ال padding */
+              }
+          }
+      }
+  </style>
+</head>
+
+<body>
+  <!-------------------------------------------Navbar------------------------------------->
+        <div class="banner">
+            <!--                            1] Navigation Bar                              -->
+            <div class="navbar">
+                <a href="index.html" style=" display: block; /*to suit div size */ width: 40px; 
+                                            height: 40px; transform: translate(15px,15px);  
+                                            margin:0;">
+                    <div class="logo"> </div>
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#AboutUs">About</a></li>
+                    <li><a href="index.html#destination">Destinations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="BookingPage.html">Book Now</a></li>
+                </ul>
+
+            <a  href="sign_in&up.html">
+                     <img src="mainpage/profileimg.png" class="profile">        
+            </a>
+            </div>
+
+  <!--------------- this code to load the page only if u signed in and appear an alert to the user to sign in --------->
+  <!-- <script>    
+        // Check if user is not authenticated (session variable not set)
+        if (!<?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>) {
+            // Display alert to inform user they need to sign in to book
+            alert("You can't book a trip without signing in.");
+
+            // Provide option to sign in (redirect to sign-in page)
+            if (confirm("Would you like to sign in now?")) {
+                window.location.href = "signinup.html"; // Redirect to sign-in page
+            }
+        }
+    </script> -->
+
+  <div class="booking-container">
+    <header>
+      <h1>BOOK NOW YOUR TRIP</h1>
+
+    </header>
+    <div class="booking-form">
+      <h2>Book Now</h2>
+
+      <form action="Detailed_Booking.php" method="POST">
+        <!-- for attribut in the tag <label> is point to the id in the input form evan when the user click on the label highlight the input value it refer to  -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination">
+          <option value="Bali">Bali</option>
+          <option value="France">France</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Morocco">Morocco</option>
+          <option value="Turkey">Turkey</option>
+        </select>
+
+        <label for="fromCountry">Where are you from:</label>
+        <select id="fromCountry" name="fromCountry">
+          <!-- List of countries -->
+          <option value="Egypt">Egypt</option>
+          <option value="Palestine">Palestine</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="Germany">Germany</option>
+          <!-- Add more countries as needed -->
+        </select>
+
+        <label for="numTravelers">Number of Travelers</label>
+        <input type="number" id="numTravelers" name="numTravelers" min="1" required />
+
+        <label for="travelDate">Trip Date:</label>
+        <input type="date" id="travelDate" name="travelDate" required />
+
+        <label for="travelTime">Trip Time:</label>
+        <select id="travelTime" name="travelTime">
+          <option value="12pm">12 PM</option>
+          <option value="6pm">6 PM</option>
+          <option value="12am">12 AM</option>
+          <option value="6am">6 AM</option>
+        </select>
+
+        <label for="paymentMethod">Payment Method</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+          <option value="creditCard">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="bankTransfer">Bank Transfer</option>
+        </select>
+
+        <button class="buttonStyle1" type="submit" name="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
