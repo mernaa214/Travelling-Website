@@ -1,0 +1,2 @@
+ErrorDocument  404 http://localhost/TravellingWebsite/error_404.html
+
